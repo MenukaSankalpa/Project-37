@@ -17,5 +17,11 @@ image = ImageTk.PhotoImage(Image.open("image/assitant.png"))
 image_label = Label(frame,image=image)
 image_label.grid(row=1,column=0,pady=20)
 
+text = Text(root, font=('courier 10 bold'),bg="#356696")
+text.grid(row=1, column=0)
+text.place(x = 100, y = 375, width=375, height=100)
+
+entry = Entry(root, justify = CENTER)
+entry.place(x=100, y=500, width=350, height=30)
 
 root.mainloop()
