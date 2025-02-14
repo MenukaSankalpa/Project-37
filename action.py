@@ -22,5 +22,24 @@ def Action():
     
     elif "shutdown" in user_data:
         text_to_speech.text_to_speech("ok sir")
+        return "ok sir"
+    
+    elif "play music" in user_data:
+        webbrowser.open("https://gaana.com/")
+        text_to_speech.text_to_speech("gaana.com lis now ready for you")
+        return "gaana.com is now ready for you" 
+    
+    elif "open youtube" in user_data:
+        webbrowser.open("https://youtube.com/")
+        text_to_speech.text_to_speech("youtube.com is now ready for you")
+        return "youtube.com is now ready for you"
+    
+    elif "open google" in user_data:
+        webbrowser.open("https://google.com")
+        text_to_speech.text_to_speech("google.com is now ready for you")
+        
+    else:
+        text_to_speech.text_to_speech("I am not able to undestant")
+        return "I am not able to undestant"
     
 Action()    
