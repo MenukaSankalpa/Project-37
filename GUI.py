@@ -1,5 +1,10 @@
 from tkinter import*
 from PIL import Image,ImageTk
+import speech_to_text
+import action
+
+
+
 root = Tk()
 root.title("AI Assistant")
 root.geometry("550x675")
@@ -7,7 +12,11 @@ root.resizable(False, False)
 root.config(bg="#6F8FAF")
 
 def ask():
-    print("Hello")
+    #print("Hello")
+    user_val = speech_to_text.speech_to_text()
+    bot_val = action.Action(user_val)
+    text.insert(END, 'User--->')
+    
     
 def del_text():
     print("Delete Text")    

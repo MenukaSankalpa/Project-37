@@ -2,9 +2,10 @@ import text_to_speech
 import speech_to_text
 import datetime 
 import webbrowser
+import weather
 
-def Action():
-    user_data = speech_to_text.speech_to_text()
+def Action(data):
+    user_data = data.lower()
     
     if "your name" in user_data:
         text_to_speech.text_to_speech("my name is AI Desktop virtual assistant")
@@ -37,6 +38,11 @@ def Action():
     elif "open google" in user_data:
         webbrowser.open("https://google.com")
         text_to_speech.text_to_speech("google.com is now ready for you")
+        
+    elif "what is the weather in Kalutara" in user_data:
+        ans = weather.weather()
+        text_to_speech.text_to_speech(ans)
+        return ans 
         
     else:
         text_to_speech.text_to_speech("I am not able to undestant")
