@@ -1,7 +1,7 @@
 import speech_recognition as sr
 
 def speech_to_text():
-    r = sr.Recognizer()
+    r = sr.Recognizer() 
     with sr.Microphone() as source:
         audio = r.listen(source)
         try:
@@ -14,4 +14,4 @@ def speech_to_text():
         except sr.RequestError:
             print("Request Error")
 
-speech_to_text()                    
+#speech_to_text()

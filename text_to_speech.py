@@ -7,4 +7,3 @@ def text_to_speech(text):
     engine.say(text)
     engine.runAndWait()
     
-text_to_speech("Hello")
