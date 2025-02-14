@@ -15,7 +15,12 @@ def ask():
     #print("Hello")
     user_val = speech_to_text.speech_to_text()
     bot_val = action.Action(user_val)
-    text.insert(END, 'User--->')
+    text.insert(END, 'User--->'+user_val+"\n")
+    
+    if bot_val != None:
+        text.insert(END, "BOT<---"+str(bot_val)+"\n")
+    if bot_val == "ok sir":
+        root.destroy()     
     
     
 def del_text():
