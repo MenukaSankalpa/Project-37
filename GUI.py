@@ -27,7 +27,19 @@ def del_text():
     print("Delete Text")    
 
 def send():
-    print("Send")
+    #print("Send")
+    send = entry.get()
+    bot = action.Action(send)
+    text.insert(END, 'User--->'+send+'\n')
+    
+    if bot != None:
+        text.insert(END, 'BOT<---'+str(bot)+'\n')
+        
+    if bot == "ok sir":
+        root.destroy()
+
+def del_text():
+    text.delete('1.0', "end")   
     
 frame = LabelFrame(root, padx=100, pady=7, borderwidth=3, relief="raised")
 frame.config(bg="#6F8FAF")
